@@ -5,6 +5,7 @@ It's a minimal out of the box docker sample.<br/>
 
 Files:<br/>
 Dockerfile: describes docker instructions<br/>
+docker-compose.yaml: Describes startup of container<br/>
 main.go: serverside application (simple http server)<br/>
 
 Create a image named "docker_go_air_hot_reload" from the Dockerfile:<br/>
@@ -28,6 +29,13 @@ docker run = default command to run a container<br/>
 -v /app/tmp = mount additional tmp path for temp files between container restarts and cache files<br/>
 --name docker_go_air_hot_reload = run container named docker_go_air_hot_reload<br/>
 docker_go_air_hot_reload = use the image named docker_go_air_hot_reload<br/>
+
+Automated build and run:<br/>
+docker compose up<br/>
+
+Description:<br/>
+Uses the docker-compose.yaml file to start one or multiple containers
+Add -d to the command to run in detached mode
 
 Visit the application:<br/>
 http://localhost:3000 <br/>
